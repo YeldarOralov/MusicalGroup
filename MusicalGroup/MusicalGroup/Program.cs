@@ -71,7 +71,9 @@ namespace MusicalGroup
             };
             using(var context = new MusicalGroupContext())
             {
-
+                context.Groups.Add(group);
+                context.Songs.Add(song);
+                context.SaveChanges();
             }
         }
     }
